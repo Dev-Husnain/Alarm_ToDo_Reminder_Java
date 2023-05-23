@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/item_alarm_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="00:00"
+                    android:textSize="15sp"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/item_alarm_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="dd/MM/yyyy"
+                    android:maxLength="10"
+                    android:textSize="15sp"
+                    android:typeface="serif"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/item_alarm_recurring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:layout_gravity="center"
+                android:background="@color/translucent_grey"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/item_alarm_recurringDays"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="10sp"
+                        tools:text="Repeating" />
+
+                    <TextView
+                        android:id="@+id/item_alarm_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:textSize="18sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:capitalize="sentences"
+                        android:layout_weight="1"
+                        tools:text="Alarm Title" />
+                    <TextView
+                        android:id="@+id/item_alarm_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upcoming"
+                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/item_alarm_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="12sp"
+                    android:layout_marginRight="75dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#000000"
+                    android:justificationMode="inter_word"
+                    android:text="Description"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="end"
+                    android:orientation="horizontal">
+                    <Switch
+                        android:id="@+id/item_alarm_started"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="UseSwitchCompatOrMaterialXml"/>
+                    <ImageButton
+                        android:id="@+id/item_alarm_recurring_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#D3F10808"
+                        android:background="@drawable/ic_baseline_delete_forever_24" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
